@@ -12,6 +12,9 @@ ingests Conftest policy output, and writes a signed digest and readiness score t
 
 ## Install
 
+Pre-built binaries for Linux and macOS (amd64/arm64) are on
+[GitHub Releases](https://github.com/sysrqio/tofudocket/releases).
+
 ```bash
 go install github.com/sysrqio/tofudocket/cmd/tofudocket@latest
 ```
@@ -21,6 +24,14 @@ Or build from source:
 ```bash
 make build
 ./bin/tofudocket version
+```
+
+### Cut a release
+
+Tag and push a version; CI runs tests and publishes release assets:
+
+```bash
+git tag v0.1.0 && git push origin v0.1.0
 ```
 
 ## Usage
